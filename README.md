@@ -15,20 +15,8 @@ The resources created are:
 * Zero or more email subscriptions
 * EventBridge Rule
 
-The file [terraform.tfvars](./terraform.tfvars "terraform.tfvars") is not committed to the repo, but it looks like this:
-```terraform
-#
-# The AWS account and region where the resources will be deployed
-#
-region         = "us-east-1"
-target_account = xxxxxxxxxxxx
-
-#
-# A comma separated list of email addresses, if none are required then use []
-#
-sns_email_subscribers = ["your.email@domain.co.uk", "alternative@domain.com"]
-```
-Obviously the region could be different, but these events [only fire in North Virginia](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/EventTypes.html#console_event_type "AWS Management Console sign-in events can be detected by CloudWatch Events only in the US East (N. Virginia) Region").
+Massage [terraform.tfvars.example](./terraform.tfvars.example "terraform.tfvars.example") and rename as `terraform.tfvars` (or to taste as you prefer).
+Obviously the specified `us-east-1` region could be different, but these events [only fire in North Virginia](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/EventTypes.html#console_event_type "AWS Management Console sign-in events can be detected by CloudWatch Events only in the US East (N. Virginia) Region").
 
 # Event Pattern
 It shouldn't need it, but the [event pattern](./event_pattern.json "event_pattern.json") can be modified to taste.

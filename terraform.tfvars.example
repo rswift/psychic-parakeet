@@ -1,0 +1,11 @@
+#
+# The AWS account and region where the resources will be deployed
+#
+region         = "us-east-1"
+target_account = 123456789012
+
+#
+# A comma separated list of email addresses, if none are required (weird!) then use []
+#
+##sns_email_subscribers = []
+sns_email_subscribers = ["your.email@domain.co.uk", "alternative@domain.com"]
